@@ -7,7 +7,6 @@
 
 body{
     background:#87CEEB;
-    color:#222;
 }
 
 header{
@@ -18,23 +17,30 @@ header{
 }
 
 nav ul{
-    list-style:none;
     display:flex;
     justify-content:center;
-    gap:20px;
+    gap:10px;
     margin-top:10px;
 }
 
-nav a{
+button{
+    padding:10px;
+    border:none;
+    background:#0055aa;
     color:white;
-    text-decoration:none;
-    font-weight:bold;
+    border-radius:5px;
+    cursor:pointer;
 }
 
-section{
+button:hover{
+    background:#0077cc;
+}
+
+.pantalla{
+    display:none;
     padding:20px;
-    margin:20px;
     background:white;
+    margin:20px;
     border-radius:10px;
 }
 
@@ -49,12 +55,4 @@ footer{
     color:white;
     text-align:center;
     padding:10px;
-}
-
-button{
-    padding:10px;
-    background:#003366;
-    color:white;
-    border:none;
-    border-radius:5px;
 }
