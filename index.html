@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turismo Querétaro</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Querétaro</h1>
+
+    <nav>
+        <button onclick="ir(0)">Inicio</button>
+        <button onclick="ir(1)">Historia</button>
+        <button onclick="ir(2)">Lugares</button>
+        <button onclick="ir(3)">Gastronomía</button>
+        <button onclick="ir(4)">Cultura</button>
+        <button onclick="ir(5)">Galería</button>
+        <button onclick="ir(6)">Contacto</button>
+        <button onclick="modoOscuro()">🌙</button>
+    </nav>
+</header>
+
+<div class="contenedor">
+
+<!-- INICIO -->
+<section class="pantalla fondo1">
+    <h2>Bienvenido a Querétaro</h2>
+    <p>
+        Querétaro es uno de los destinos más importantes de México, 
+        famoso por su historia, arquitectura colonial y crecimiento moderno.
+    </p>
+</section>
+
+<!-- HISTORIA -->
+<section class="pantalla">
+    <h2>Historia</h2>
+    <p>
+        Fundado en 1531, Querétaro fue un punto clave durante la independencia de México.
+        En esta ciudad se firmó la Constitución de 1917.
+    </p>
+    <p>
+        Su centro histórico es Patrimonio de la Humanidad por su belleza colonial.
+    </p>
+
+    <img src="img/info1.jpg">
+    <img src="img/info2.jpg">
+</section>
+
+<!-- LUGARES -->
+<section class="pantalla">
+    <h2>Lugares turísticos</h2>
+    <p>
+        El Acueducto de Querétaro es uno de los monumentos más representativos.
+    </p>
+    <p>
+        La Peña de Bernal es uno de los monolitos más grandes del mundo.
+    </p>
+
+    <img src="img/lugar1.jpg">
+    <img src="img/lugar2.jpg">
+</section>
+
+<!-- GASTRONOMÍA -->
+<section class="pantalla">
+    <h2>Gastronomía</h2>
+    <p>
+        La cocina queretana incluye enchiladas queretanas, gorditas de maíz
+        y dulces tradicionales.
+    </p>
+    <p>
+        También destacan sus rutas del vino y queso.
+    </p>
+
+    <img src="img/comida1.jpg">
+    <img src="img/comida2.jpg">
+</section>
+
+<!-- CULTURA -->
+<section class="pantalla">
+    <h2>Cultura</h2>
+    <p>
+        Querétaro cuenta con festivales, música tradicional y eventos culturales
+        durante todo el año.
+    </p>
+    <p>
+        Su riqueza cultural lo convierte en un destino único.
+    </p>
+
+    <img src="img/galeria1.jpg">
+    <img src="img/galeria2.jpg">
+</section>
+
+<!-- GALERÍA -->
+<section class="pantalla">
+    <h2>Galería</h2>
+
+    <div class="galeria">
+        <img src="img/queretaro1.jpg">
+        <img src="img/queretaro2.jpg">
+        <img src="img/lugar1.jpg">
+        <img src="img/comida1.jpg">
+    </div>
+
+</section>
+
+<!-- CONTACTO -->
+<section class="pantalla">
+    <h2>Contacto</h2>
+    <p>Visita Querétaro y vive una experiencia inolvidable.</p>
+
+    <button onclick="mensaje()">Descubrir más</button>
+
+    <button class="extra" onclick="window.open('https://maps.google.com?q=Querétaro')">
+        Ver ubicación 📍
+    </button>
+</section>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
