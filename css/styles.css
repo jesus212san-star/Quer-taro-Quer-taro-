@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial;
+}
+
+body{
+    overflow:hidden;
+    transition: background 0.5s, color 0.5s;
+}
+
+/* MODO OSCURO */
+body.dark{
+    background:#111;
+    color:white;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    width:100%;
+    background:#002244;
+    color:white;
+    text-align:center;
+    padding:10px;
+    z-index:10;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav button{
+    margin:5px;
+    padding:8px;
+    border:none;
+    background:#0055aa;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+nav button:hover{
+    background:#00aaff;
+}
+
+/* CONTENEDOR */
+.contenedor{
+    display:flex;
+    width:700%;
+    height:100vh;
+    transition: transform 0.7s ease-in-out;
+}
+
+/* PANTALLAS */
+.pantalla{
+    width:100vw;
+    height:100vh;
+    flex-shrink:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:80px 20px;
+    text-align:center;
+    color:white;
+    opacity:0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+/* ANIMACIÓN ACTIVA */
+.pantalla.activa{
+    opacity:1;
+    transform: translateY(0);
+}
+
+/* FONDOS */
+.fondo1{
+    background:url('../img/queretaro1.jpg') center/cover;
+}
+
+.pantalla:nth-child(2){background:#1abc9c;}
+.pantalla:nth-child(3){background:#3498db;}
+.pantalla:nth-child(4){background:#e67e22;}
+.pantalla:nth-child(5){background:#9b59b6;}
+.pantalla:nth-child(6){background:#2ecc71;}
+.pantalla:nth-child(7){background:#34495e;}
+
+img{
+    width:220px;
+    margin:10px;
+    border-radius:10px;
+}
+
+/* GALERÍA */
+.galeria{
+    display:flex;
+    overflow:hidden;
+    width:80%;
+}
+
+.galeria img{
+    min-width:100%;
+    transition: transform 0.5s;
+}
+
+/* BOTONES */
+button.extra{
+    margin-top:10px;
+    background:#ff9800;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    img{
+        width:90%;
+    }
+
+    h2{
+        font-size:22px;
+    }
+
+    p{
+        font-size:14px;
+    }
+}
