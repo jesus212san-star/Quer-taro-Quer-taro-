@@ -12,68 +12,62 @@
     <h1>Querétaro, México</h1>
     <nav>
         <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#info">Información</a></li>
-            <li><a href="#lugares">Lugares</a></li>
-            <li><a href="#cultura">Cultura</a></li>
-            <li><a href="#galeria">Galería</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><button onclick="mostrar('inicio')">Inicio</button></li>
+            <li><button onclick="mostrar('info')">Información</button></li>
+            <li><button onclick="mostrar('lugares')">Lugares</button></li>
+            <li><button onclick="mostrar('cultura')">Cultura</button></li>
+            <li><button onclick="mostrar('galeria')">Galería</button></li>
+            <li><button onclick="mostrar('contacto')">Contacto</button></li>
         </ul>
     </nav>
 </header>
 
 <main>
 
-<section id="inicio">
+<section id="inicio" class="pantalla">
     <h2>Inicio</h2>
-    <p>Querétaro es una ciudad llena de historia, arquitectura colonial y cultura mexicana.</p>
+    <p>Querétaro es una ciudad llena de historia y tradición.</p>
     <img src="img/queretaro1.jpg">
     <img src="img/queretaro2.jpg">
 </section>
 
-<section id="info">
-    <h2>Información del lugar</h2>
-    <article>
-        <p>Querétaro es uno de los estados más importantes de México, conocido por su crecimiento económico y su patrimonio histórico.</p>
-    </article>
+<section id="info" class="pantalla">
+    <h2>Información</h2>
+    <p>Querétaro destaca por su crecimiento económico y su patrimonio cultural.</p>
     <img src="img/info1.jpg">
     <img src="img/info2.jpg">
 </section>
 
-<section id="lugares">
+<section id="lugares" class="pantalla">
     <h2>Lugares turísticos</h2>
-    <article>
-        <p>Entre los lugares más visitados están el Acueducto, el Centro Histórico y Peña de Bernal.</p>
-    </article>
+    <p>Visita el Acueducto, el Centro Histórico y Peña de Bernal.</p>
     <img src="img/lugar1.jpg">
     <img src="img/lugar2.jpg">
 </section>
 
-<section id="cultura">
-    <h2>Gastronomía y cultura</h2>
-    <article>
-        <p>La gastronomía incluye enchiladas queretanas, gorditas y dulces típicos.</p>
-    </article>
+<section id="cultura" class="pantalla">
+    <h2>Gastronomía</h2>
+    <p>Disfruta enchiladas queretanas, gorditas y dulces típicos.</p>
     <img src="img/comida1.jpg">
     <img src="img/comida2.jpg">
 </section>
 
-<section id="galeria">
+<section id="galeria" class="pantalla">
     <h2>Galería</h2>
     <img src="img/galeria1.jpg">
     <img src="img/galeria2.jpg">
 </section>
 
-<section id="contacto">
+<section id="contacto" class="pantalla">
     <h2>Contacto</h2>
-    <p>Visita Querétaro y descubre su belleza.</p>
+    <p>Explora Querétaro y vive su cultura.</p>
     <button onclick="mensaje()">Haz clic</button>
 </section>
 
 </main>
 
 <footer>
-    <p>Proyecto Final HTML5 - Querétaro</p>
+    <p>Proyecto Final HTML5</p>
 </footer>
 
 <script src="js/app.js"></script>
