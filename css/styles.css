@@ -128,3 +128,67 @@ button.extra{
         font-size:14px;
     }
 }
+
+html, body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+/* Centrar todo */
+.contenedor{
+    display:flex;
+    width:700%;
+    height:100vh;
+}
+
+/* Cada pantalla ocupa TODA la pantalla */
+.pantalla{
+    width:100vw;
+    height:100vh;
+    flex-shrink:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:80px 20px;
+}
+
+/* 🔥 SOLUCIÓN CLAVE PARA CELULAR */
+@media(max-width:768px){
+
+    body{
+        overflow:auto;
+    }
+
+    header{
+        font-size:14px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+    }
+
+    nav button{
+        font-size:12px;
+        padding:6px;
+    }
+
+    .contenedor{
+        height:100vh;
+    }
+
+    .pantalla{
+        width:100vw;
+        height:100vh;
+        padding:100px 10px;
+    }
+
+    img{
+        width:90%;
+        max-width:300px;
+    }
+}
