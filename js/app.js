@@ -9,18 +9,15 @@ function ir(n){
 
     index = n;
 
-    contenedor.style.transform = `translateX(-${n * 100}vw)
-    activarAnimacion();
-    sonido();
+    contenedor.style.transform = `translateX(-${n * 100}vw)`;
+
+    activarIndicadores();
 }
 
-function activarAnimacion(){
+function activarIndicadores(){
     let puntos = document.querySelectorAll(".indicadores span");
 
-    pantallas.forEach(p => p.classList.remove("activa"));
     puntos.forEach(p => p.classList.remove("activo"));
-
-    pantallas[index].classList.add("activa");
     puntos[index].classList.add("activo");
 }
 
@@ -36,12 +33,7 @@ function toggleMenu(){
   document.getElementById("menu").classList.toggle("activo");
 }
 
-function sonido(){
-  let s = document.getElementById("sonido");
-  if(s) s.play();
-}
-
 window.onload = ()=>{
-  activarAnimacion();
+  activarIndicadores();
   document.getElementById("loader").style.display="none";
 };
