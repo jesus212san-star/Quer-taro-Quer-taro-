@@ -3,58 +3,46 @@ const pantallas = document.querySelectorAll(".pantalla");
 const total = pantallas.length;
 const contenedor = document.querySelector(".contenedor");
 
-/* NAVEGACIÓN */
 function ir(n){
     if(n < 0) n = 0;
     if(n >= total) n = total - 1;
 
     index = n;
 
-    contenedor.style.transform = `translateX(-${n * 100}vw)`;
+    contenedor.style.transform = `translateY(-${n * 100}vh)`;
 
     activarAnimacion();
+    sonido();
 }
 
-/* ANIMACIÓN */
 function activarAnimacion(){
+    let puntos = document.querySelectorAll(".indicadores span");
+
     pantallas.forEach(p => p.classList.remove("activa"));
+    puntos.forEach(p => p.classList.remove("activo"));
+
     pantallas[index].classList.add("activa");
+    puntos[index].classList.add("activo");
 }
 
-/* BOTÓN */
 function mensaje(){
-    alert("¡Querétaro te espera! 🌄");
+    alert("¡Querétaro te espera!");
 }
 
-/* MODO OSCURO */
 function modoOscuro(){
     document.body.classList.toggle("dark");
 }
 
-/* DESLIZAR CON EL DEDO (CELULAR) */
-let startX = 0;
+function toggleMenu(){
+  document.getElementById("menu").classList.toggle("activo");
+}
 
-contenedor.addEventListener("touchstart", e => {
-    startX = e.touches[0].clientX;
-});
+function sonido(){
+  let s = document.getElementById("sonido");
+  if(s) s.play();
+}
 
-contenedor.addEventListener("touchend", e => {
-    let endX = e.changedTouches[0].clientX;
-
-    if(startX - endX > 50){
-        ir(index + 1); // desliza izquierda
-    } else if(endX - startX > 50){
-        ir(index - 1); // desliza derecha
-    }
-});
-
-/* TECLADO */
-document.addEventListener("keydown", e=>{
-    if(e.key === "ArrowRight") ir(index+1);
-    if(e.key === "ArrowLeft") ir(index-1);
-});
-
-/* INICIO */
 window.onload = ()=>{
-    activarAnimacion();
+  activarAnimacion();
+  document.getElementById("loader").style.display="none";
 };
