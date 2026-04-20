@@ -95,11 +95,12 @@ p{
     max-width:600px;
 }
 
-/* IMÁGENES */
-img{
-    width:250px;
-    margin:10px;
-    border-radius:10px;
+.imagen {
+  width: 30%;        /* más pequeñas */
+  max-width: 150px;  /* límite */
+  height: auto;
+  display: block;
+  margin: auto;
 }
 
 /* GALERÍA */
