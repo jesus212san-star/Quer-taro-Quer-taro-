@@ -5,18 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Turismo Querétaro</title>
 
-<!-- FUENTE PRO -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
 <header>
     <h1>Querétaro</h1>
 
-    <nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <nav id="menu">
         <button onclick="ir(0)">Inicio</button>
         <button onclick="ir(1)">Historia</button>
         <button onclick="ir(2)">Lugares</button>
@@ -29,107 +34,58 @@
 
 <div class="contenedor">
 
-<!-- INICIO -->
 <section class="pantalla fondo1">
     <h2>Bienvenido a Querétaro</h2>
-    <p>
-        Querétaro es uno de los destinos más importantes de México, 
-        famoso por su historia, arquitectura colonial y crecimiento moderno.
-    </p>
-
-    <img src="10.jpg" alt="Querétaro" class="centrada">
-
-    <a href="https://es.wikipedia.org/wiki/Quer%C3%A9taro" class="boton" target="_blank">
-        Más información →
-    </a>
+    <p>Querétaro es uno de los destinos más importantes de México.</p>
+    <img src="10.jpg" alt="Querétaro">
+    <a href="https://es.wikipedia.org/wiki/Quer%C3%A9taro" class="boton" target="_blank">Más información →</a>
 </section>
 
-<!-- HISTORIA -->
 <section class="pantalla">
     <h2>Historia</h2>
-    <p>
-        Fundado en 1531, Querétaro fue un punto clave durante la independencia de México.
-        En esta ciudad se firmó la Constitución de 1917.
-    </p>
-    <p>
-        Su centro histórico es Patrimonio de la Humanidad por su belleza colonial.
-    </p>
-
-    <img src="historia.jpg" alt="Historia de Querétaro" class="centrada">
-
-    <a href="https://programadestinosmexico.com/historia-de-queretaro/" class="boton" target="_blank">
-        Más información →
-    </a>
+    <p>Fundado en 1531, fue clave en la independencia.</p>
+    <img src="historia.jpg" alt="">
 </section>
 
-<!-- LUGARES -->
 <section class="pantalla">
     <h2>Lugares turísticos</h2>
-    <p>
-        El Acueducto de Querétaro es uno de los monumentos más representativos.
-    </p>
-    <p>
-        La Peña de Bernal es uno de los monolitos más grandes del mundo.
-    </p>
-
-    <img src="19.jpg" alt="Lugares turísticos" class="centrada">
-
-    <a href="https://programadestinosmexico.com/maravillas-naturales-en-queretaro/" class="boton" target="_blank">
-        Más información →
-    </a>
+    <p>Acueducto y Peña de Bernal.</p>
+    <img src="19.jpg" alt="">
 </section>
 
-<!-- GASTRONOMÍA -->
 <section class="pantalla">
     <h2>Gastronomía</h2>
-    <p>
-        La cocina queretana incluye enchiladas queretanas, gorditas de maíz
-        y dulces tradicionales.
-    </p>
-    <p>
-        También destacan sus rutas del vino y queso.
-    </p>
-
-    <img src="gastronomía.jpg" alt="Gastronomía de Querétaro" class="centrada">
-
-    <a href="https://queretaro.anahuac.mx/licenciaturas/blog/las-comidas-de-queretaro-que-te-inspiraran-a-estudiar-gastronomia" class="boton" target="_blank">
-        Más información →
-    </a>
+    <p>Enchiladas, gorditas y más.</p>
+    <img src="gastronomia.jpg" alt="">
 </section>
 
-<!-- CULTURA -->
 <section class="pantalla">
     <h2>Cultura</h2>
-    <p>
-        Querétaro cuenta con festivales, música tradicional y eventos culturales
-        durante todo el año.
-    </p>
-    <p>
-        Su riqueza cultural lo convierte en un destino único.
-    </p>
-
-    <img src="cultura.jpg" alt="Cultura de Querétaro" class="centrada">
-
-    <a href="https://tlatelolcounam.mx/caminoreal/queretaro-2/queretarocultura/" class="boton" target="_blank">
-        Más información →
-    </a>
+    <p>Festivales y tradiciones.</p>
+    <img src="cultura.jpg" alt="">
 </section>
 
-<!-- CONTACTO -->
 <section class="pantalla">
     <h2>Contacto</h2>
-    <p>Visita Querétaro y vive una experiencia inolvidable.</p>
-
-    <img src="17.jpg" alt="Contacto" class="centrada">
-
+    <p>Visita Querétaro.</p>
     <button onclick="mensaje()">Descubrir más</button>
-
-    <button class="boton" onclick="window.open('https://maps.google.com?q=Querétaro')">
-        Ver ubicación 📍
-    </button>
 </section>
 
 </div>
+
+<!-- INDICADORES -->
+<div class="indicadores">
+  <span onclick="ir(0)"></span>
+  <span onclick="ir(1)"></span>
+  <span onclick="ir(2)"></span>
+  <span onclick="ir(3)"></span>
+  <span onclick="ir(4)"></span>
+  <span onclick="ir(5)"></span>
+</div>
+
+<audio id="sonido">
+  <source src="click.mp3" type="audio/mpeg">
+</audio>
 
 <script src="js/app.js"></script>
 
