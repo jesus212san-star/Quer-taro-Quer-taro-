@@ -9,8 +9,7 @@ function ir(n){
 
     index = n;
 
-    contenedor.style.transform = `translateY(-${n * 100}vh)`;
-
+    contenedor.style.transform = `translateX(-${n * 100}vw)
     activarAnimacion();
     sonido();
 }
