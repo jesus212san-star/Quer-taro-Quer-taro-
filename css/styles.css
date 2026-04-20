@@ -111,7 +111,14 @@ img{
   border-radius:10px;
   text-decoration:none;
 }
+.extra{
+  background:#ff9800; /* naranja */
+  color:white;
+}
 
+.extra:hover{
+  background:#e68900; /* más oscuro al pasar */
+}
 /* INDICADORES */
 .indicadores{
   position:fixed;
